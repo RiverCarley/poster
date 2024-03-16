@@ -10,7 +10,7 @@ html, body {
 }
 
 .column {
-    flex: 1;
+    flex: 0.25;
     background-color: #f0f0f0;
     border: 0.1vw solid #ccc;
     padding: 0.1vw;
@@ -54,7 +54,7 @@ h1, h2 {
     transform: rotate(-90deg); /* Rotate the title vertically */
     writing-mode: vertical-lr; /* Rotate the text vertically (for modern browsers) */
     text-orientation: sideways; /* Rotate the text vertically (for older browsers) */
-    margin-top: 5vw;
+    margin-top: 2vw;
     
 }
 .column-title.horizontal {
@@ -115,7 +115,7 @@ h1, h2 {
 .text {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
-    font-size: 1vw;
+    font-size: 1.5vw;
 }
 
 .compressed .text {
