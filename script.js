@@ -33,9 +33,6 @@ $(document).ready(function(){
             });
             console.log("Column expanded"); // Debug log
         }
-        
-        // Hide images when a column is clicked
-        $(".images").addClass("hidden-images");
     }
 
     // Click event handler for columns
@@ -70,7 +67,7 @@ $(document).ready(function(){
                 nextImage = $(this).find(".images img").first();
             }
             activeImage.removeClass("active").hide();
-            nextImage.addClass("active").hide();
+            nextImage.addClass("active").show();
             nextImage.appendTo($(this).find(".images"));
         });
     }
