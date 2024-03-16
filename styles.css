@@ -23,7 +23,7 @@ html, body {
 
 
 .expanded {
-    flex: 300; /* Expanded column takes more space */
+    flex: 1000; /* Expanded column takes more space */
 }
 
 
