@@ -4,8 +4,8 @@ $(document).ready(function(){
     // Add horizontal class to column titles initially
     $(".column-title").addClass("horizontal");
 
-    // Function to handle column click
-    function handleColumnClick(clickedColumn) {
+    // Function to handle column interaction
+    function handleColumnInteraction(clickedColumn) {
         // Check if the clicked column is already expanded
         var isExpanded = clickedColumn.hasClass("expanded");
         if (isExpanded) {
@@ -39,8 +39,15 @@ $(document).ready(function(){
     }
 
     // Click event handler for columns
-    $(".column").on("click touchstart", function(){
-        handleColumnClick($(this));
+    $(".column").click(function(){
+        handleColumnInteraction($(this));
+    });
+
+    // Touch event handler for columns
+    $(".column").on("touchstart", function(event){
+        // Prevent default touch behavior (e.g., scrolling)
+        event.preventDefault();
+        handleColumnInteraction($(this));
     });
 
     // Ensure that no column is initially expanded or compressed
