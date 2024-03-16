@@ -17,9 +17,15 @@ html, body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: flex 0.5s ease; /* Add transition for flex property */
+    transition: flex 10s ease; /* Add transition for flex property */
 }
 
+.column.compressed {
+    transition: flex 0.2s ease; /* Faster transition for compressing */
+}
+.column.expanded {
+    transition: flex 30s ease; /* Faster transition for compressing */
+}
 
 
 .expanded {
@@ -37,7 +43,7 @@ h1, h2 {
     text-align: center;
     font-weight: bold;
     font-size: 2.5vw;
-    transition: transform 0.5s ease;
+    transition: transform 10s ease;
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
