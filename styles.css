@@ -82,12 +82,12 @@ h1, h2 {
 
 /* Adjust the position of images in the second column */
 .column:nth-child(2) .images img {
-    top:1px; /* Adjust this value as needed */
+    top:0px; /* Adjust this value as needed */
 }
 
 /* Adjust the position of images in other columns */
 .column .images img {
-    top: 135px; /* Adjust this value as needed */
+    top: 3.4vw; /* Adjust this value as needed */
 }
 
 /* Set the top value of images in the second column to 0 when expanded */
