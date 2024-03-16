@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    display: flex;
+    height: 100%; /* Extend container to full height of the page */
+}
+
+.column {
+    flex: 1;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 1px;
+    transition: flex 0.5s ease;
+    cursor: pointer;
+    display: flex; /* Use flexbox for column layout */
+    flex-direction: column; /* Arrange items in a column */
+}
+
+
+.expanded {
+    flex: 30; /* Expanded column takes more space */
+}
+
+.compressed {
+    flex: 0.01; /* Compressed column takes less space */
+}
+
+h1, h2 {
+    font-size: 5vw;
+    text-align: center;
+}
+
+.column-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 3vw;
+    transition: transform 0.5s ease;
+    display: flex;
+    align-items: flex-start; /* Align title to the start of its container vertically */
+    justify-content: center; /* Center horizontally */
+    margin-bottom: 1px; /* Add some bottom margin */
+}
+
+.column-title.vertical {
+    transform: rotate(-90deg); /* Rotate the title vertically */
+    writing-mode: vertical-lr; /* Rotate the text vertically (for modern browsers) */
+    text-orientation: sideways; /* Rotate the text vertically (for older browsers) */
+    
+}
+.column-title.horizontal {
+    transform: rotate(0deg); /* Rotate the title vertically */
+
+}
+/* Change the font size of the title to 2vw when compressed */
+.column.compressed .column-title {
+    font-size: 2vw;
+}
+
+.content {
+    display: flex; /* Use flexbox for content layout */
+}
+
+.images {
+    flex: 1; /* Make the image span the whole compressed column */
+    display: flex; /* Use flexbox for image layout */
+    flex-direction: column; /* Arrange images in a column */
+    align-items: center; /* Center images vertically */
+    position: relative; /* Position images relative to the container */
+}
+
+.images img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 140px; /* Adjust this value according to the height of your title */
+}
+
+/* Adjust the position of images in the second column */
+.column:nth-child(2) .images img {
+    top:1px; /* Adjust this value as needed */
+}
+
+/* Adjust the position of images in other columns */
+.column .images img {
+    top: 135px; /* Adjust this value as needed */
+}
+
+/* Set the top value of images in the second column to 0 when expanded */
+.column.expanded:nth-child(2) .images img {
+    top: 0;
+}
+
+/* Set the top value of images in other columns to 0 when expanded */
+.column.expanded .images img {
+    top: 0;
+}
+
+/* Set the height of images to 0 when the column is compressed */
+/* Set the height of images to 0 when the column is compressed */
+.column.compressed .images img {
+    height: 0;
+    visibility: hidden;
+}
+
+.text {
+    flex: 1; /* Fill remaining space */
+    display: none; /* Hide the text by default */
+    font-size: 1vw;
+}
+
+.compressed .text {
+    display: none; /* Show the text when the column is compressed */
+}
+
+.expanded .text {
+    display: block; /* Show the text when the column is expanded */
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: white;
+    cursor: pointer;
+    font-size: 20px;
+}
+
