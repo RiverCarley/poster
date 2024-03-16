@@ -22,13 +22,7 @@ html, body {
 
 
 
-.expanded {
-    flex: 30; /* Expanded column takes more space */
-}
 
-.compressed {
-    flex: 0.01; /* Compressed column takes less space */
-}
 
 h1, h2 {
     font-size: 5vw;

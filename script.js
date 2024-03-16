@@ -11,39 +11,29 @@ $(document).ready(function(){
         if (isExpanded) {
             // Remove expanded class from the clicked column
             clickedColumn.removeClass("expanded");
-            // Restore all columns to their initial state
-            $(".column.expanded, .column.compressed").removeClass("expanded compressed");
-
-            $(".column-title").removeClass("vertical");
             // Hide all images except the first one in each column
-            $(".column.compressed .images").css("height", 0);
+            $(".column .images").css("height", 0);
             console.log("Column compressed"); // Debug log
         } else {
             // Collapse all columns except the clicked one
-            $(".column").removeClass("expanded").addClass("compressed");
+            $(".column").not(clickedColumn).removeClass("expanded");
             
-            // Toggle the expanded/compressed class on the clicked column
-            clickedColumn.addClass("expanded").removeClass("compressed");
+            // Toggle the expanded class on the clicked column
+            clickedColumn.addClass("expanded");
             // Toggle the vertical class on the column title based on the column's state
             $(".column").each(function() {
-                var isCompressed = $(this).hasClass("compressed");
+                var isCompressed = !$(this).hasClass("expanded");
                 $(this).find(".column-title").toggleClass("vertical", isCompressed);
                 // Toggle the hidden class on the text based on the column's state
-                $(this).find(".text").toggleClass("hidden", !isCompressed);
-                // Hide images when column is compressed
-                if (isCompressed) {
-                    $(this).find(".images").css("height", 0);
-                    $(".column.expanded").css("flex", "0 0 " + 0.1);
-                } else {
-                    // Show the images when the column is expanded
-                    $(this).find(".images").css("height", "auto");
-                    $(".column.expanded").css("flex", "0 0 " + 30);
-                }
+                $(this).find(".text").toggleClass("hidden", isCompressed);
+                // Set the flex value of the expanded column
+                var flexValue = isCompressed ? "1" : "30"; // Adjust flex value as needed
+                $(this).css("flex", flexValue);
+                // Set the height of images when the column is expanded
+                $(this).find(".images").css("height", isCompressed ? 0 : "auto");
             });
             console.log("Column expanded"); // Debug log
         }
-        
-
     }
 
     // Click event handler for columns
@@ -59,11 +49,8 @@ $(document).ready(function(){
         handleColumnClick($(this));
     });
 
-    // Ensure that no column is initially expanded or compressed
-    $(".column").removeClass("expanded compressed");
-    $(".column-title").removeClass("vertical");
-
-
+    // Ensure that no column is initially expanded
+    $(".column").removeClass("expanded");
 
     // Function to cycle images
     function cycleImages() {
