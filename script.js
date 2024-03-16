@@ -20,7 +20,7 @@ $(document).ready(function(){
             // Toggle the writing-mode property on the column title based on the column's state
             $(".column").each(function() {
                 var isCompressed = $(this).hasClass("compressed");
-                $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "");
+              //  $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "");
                 $(this).find(".text").toggleClass("hidden", !isCompressed);
                 if (isCompressed) {
                     $(this).find(".images").css("height", 0);
