@@ -12,7 +12,8 @@ $(document).ready(function(){
             // Remove expanded class from the clicked column
             clickedColumn.removeClass("expanded");
             // Restore all columns to their initial state
-            $(".column").removeClass("expanded compressed");
+            $(".column.expanded, .column.compressed").removeClass("expanded compressed");
+
             $(".column-title").removeClass("vertical");
             // Hide all images except the first one in each column
             $(".column.compressed .images").css("height", 0);
