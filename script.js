@@ -38,11 +38,12 @@ $(document).ready(function(){
         }
     }
 
-// Click and touch event handler for columns
-$(".column").on("click touchend", function(e){
-    e.preventDefault(); // Prevent default click or touch behavior
-    handleColumnClick($(this));
-});
+    // Click and touch event handler for columns with debug log
+    $(".column").on("click touchend", function(e){
+        e.preventDefault(); // Prevent default click or touch behavior
+        console.log("Column clicked"); // Debug log
+        handleColumnClick($(this));
+    });
 
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");

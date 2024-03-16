@@ -14,11 +14,12 @@ html, body {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 1px;
-    transition: flex 0.5s ease;
     cursor: pointer;
-    display: flex; /* Use flexbox for column layout */
-    flex-direction: column; /* Arrange items in a column */
+    display: flex;
+    flex-direction: column;
+    transition: flex 0.5s ease; /* Add transition for flex property */
 }
+
 
 
 .expanded {
