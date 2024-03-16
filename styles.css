@@ -10,21 +10,22 @@ html, body {
 }
 
 .column {
-    flex: 0.25;
+    flex: 1;
     background-color: #f0f0f0;
     border: 0.1vw solid #ccc;
     padding: 0.1vw;
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: flex 10s ease; /* Add transition for flex property */
+    transition: flex 0.5s ease, height 0.5s ease; /* Add transition for flex property */
 }
 
 .column.compressed {
-    transition: flex 0.2s ease; /* Faster transition for compressing */
+    transition: flex 0.5s ease, height 0.5s ease; /* Ensure consistent transition properties for compressed state */
 }
+
 .column.expanded {
-    transition: flex 30s ease; /* Faster transition for compressing */
+    transition: flex 30s ease, height 0.5s ease; /* Faster transition for compressing */
 }
 
 
