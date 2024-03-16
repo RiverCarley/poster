@@ -9,61 +9,42 @@ $(document).ready(function(){
         // Check if the clicked column is already expanded
         var isExpanded = clickedColumn.hasClass("expanded");
         if (isExpanded) {
-            // Remove expanded class from the clicked column
+            // Reset the clicked column to its initial state
             clickedColumn.removeClass("expanded");
-            // Restore all columns to their initial state
             $(".column.expanded, .column.compressed").removeClass("expanded compressed");
-
             $(".column-title").removeClass("vertical");
-            // Hide all images except the first one in each column
             $(".column.compressed .images").css("height", 0);
             console.log("Column compressed"); // Debug log
         } else {
             // Collapse all columns except the clicked one
             $(".column").removeClass("expanded").addClass("compressed");
-            
             // Toggle the expanded/compressed class on the clicked column
             clickedColumn.addClass("expanded").removeClass("compressed");
             // Toggle the vertical class on the column title based on the column's state
             $(".column").each(function() {
                 var isCompressed = $(this).hasClass("compressed");
                 $(this).find(".column-title").toggleClass("vertical", isCompressed);
-                // Toggle the hidden class on the text based on the column's state
                 $(this).find(".text").toggleClass("hidden", !isCompressed);
-                // Hide images when column is compressed
                 if (isCompressed) {
                     $(this).find(".images").css("height", 0);
-                    $(".column.expanded").css("flex", "0 0 " + 0.1);
                 } else {
-                    // Show the images when the column is expanded
                     $(this).find(".images").css("height", "auto");
-                    $(".column.expanded").css("flex", "0 0 " + 30);
                 }
             });
             console.log("Column expanded"); // Debug log
         }
-        
-
     }
 
     // Click event handler for columns
-    $(".column").on("click", function(){
-        console.log("Column clicked"); // Debug log
-        handleColumnClick($(this));
-    });
-
-    // Touch event handler for columns
-    $(".column").on("touchend", function(e){
+    $(".column").on("click touchend", function(e){
         e.preventDefault(); // Prevent default touch behavior
-        console.log("Column touched"); // Debug log
+        console.log("Column clicked"); // Debug log
         handleColumnClick($(this));
     });
 
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");
     $(".column-title").removeClass("vertical");
-
-
 
     // Function to cycle images
     function cycleImages() {
