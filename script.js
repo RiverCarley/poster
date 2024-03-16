@@ -1,9 +1,6 @@
 $(document).ready(function(){
     console.log("Document ready"); // Debug log
     
-    // Add horizontal class to column titles initially
-    $(".column-title").addClass("horizontal");
-
     // Function to handle column click
     function handleColumnClick(clickedColumn) {
         // Check if the clicked column is already expanded
@@ -12,7 +9,7 @@ $(document).ready(function(){
             // Reset the clicked column to its initial state
             clickedColumn.removeClass("expanded");
             $(".column.expanded, .column.compressed").removeClass("expanded compressed");
-            $(".column-title").removeClass("vertical");
+            $(".column-title").css("writing-mode", "");
             $(".column.compressed .images").css("height", 0);
             console.log("Column compressed"); // Debug log
         } else {
@@ -20,10 +17,10 @@ $(document).ready(function(){
             $(".column").removeClass("expanded").addClass("compressed");
             // Toggle the expanded/compressed class on the clicked column
             clickedColumn.addClass("expanded").removeClass("compressed");
-            // Toggle the vertical class on the column title based on the column's state
+            // Toggle the writing-mode property on the column title based on the column's state
             $(".column").each(function() {
                 var isCompressed = $(this).hasClass("compressed");
-                $(this).find(".column-title").toggleClass("vertical", isCompressed);
+                $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "");
                 $(this).find(".text").toggleClass("hidden", !isCompressed);
                 if (isCompressed) {
                     $(this).find(".images").css("height", 0);
@@ -56,7 +53,6 @@ $(document).ready(function(){
 
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");
-    $(".column-title").removeClass("vertical");
 
     // Function to cycle images
     function cycleImages() {

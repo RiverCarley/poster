@@ -48,16 +48,6 @@ h1, h2 {
     margin-bottom: 0.1vw; /* Add some bottom margin */
 }
 
-.column-title.vertical {
-
-    writing-mode: vertical-lr; /* Rotate the text vertically (for modern browsers) */
-    
-    margin-top: 2vw;
-}
-
-.column-title.horizontal {
-    transform: rotate(0deg); /* Rotate the title vertically */
-}
 
 /* Change the font size of the title to 2vw when compressed */
 .column.compressed .column-title {
