@@ -12,8 +12,8 @@ html, body {
 .column {
     flex: 1;
     background-color: #f0f0f0;
-    border: 1px solid #ccc;
-    padding: 1px;
+    border: 0.1vw solid #ccc;
+    padding: 0.1vw;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -39,12 +39,12 @@ h1, h2 {
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 2.5vw;
     transition: transform 0.5s ease;
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
-    margin-bottom: 1px; /* Add some bottom margin */
+    margin-bottom: 0.1vw; /* Add some bottom margin */
 }
 
 .column-title.vertical {
