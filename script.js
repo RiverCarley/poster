@@ -38,17 +38,18 @@ $(document).ready(function(){
         }
     }
 
-    // Click event handler for columns
-    $(".column").click(function(){
-        handleColumnInteraction($(this));
-    });
+    /// Click event handler for columns
+$(".column").on("click", function(e){
+    e.preventDefault(); // Prevent default click behavior
+    handleColumnClick($(this));
+});
 
-    // Touch event handler for columns
-    $(".column").on("touchstart", function(event){
-        // Prevent default touch behavior (e.g., scrolling)
-        event.preventDefault();
-        handleColumnInteraction($(this));
-    });
+// Touch event handler for columns
+$(".column").on("touchstart", function(e){
+    e.preventDefault(); // Prevent default touch behavior
+    handleColumnClick($(this));
+});
+
 
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");
