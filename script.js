@@ -39,7 +39,7 @@ $(document).ready(function(){
     }
 
     // Click event handler for columns
-    $(".column").click(function(){
+    $(".column").on("click touchstart", function(){
         handleColumnClick($(this));
     });
 
