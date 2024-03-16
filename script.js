@@ -9,7 +9,7 @@ $(document).ready(function(){
             // Reset the clicked column to its initial state
             clickedColumn.removeClass("expanded");
             $(".column.expanded, .column.compressed").removeClass("expanded compressed");
-            $(".column-title").css("writing-mode", "").css("-webkit-writing-mode", ""); // Reset writing-mode property
+            $(".column-title").css("writing-mode", "");
             $(".column.compressed .images").css("height", 0);
             console.log("Column compressed"); // Debug log
         } else {
@@ -20,7 +20,7 @@ $(document).ready(function(){
             // Toggle the writing-mode property on the column title based on the column's state
             $(".column").each(function() {
                 var isCompressed = $(this).hasClass("compressed");
-                $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "").css("-webkit-writing-mode", isCompressed ? "vertical-lr" : ""); // Apply writing-mode for both standard and webkit
+                $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "");
                 $(this).find(".text").toggleClass("hidden", !isCompressed);
                 if (isCompressed) {
                     $(this).find(".images").css("height", 0);

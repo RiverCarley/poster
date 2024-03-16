@@ -17,16 +17,10 @@ html, body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: flex 0.5s ease-in, height 0.5s ease-in; /* Add transition for flex property */
+   
 }
 
-.column.compressed {
-    transition: flex 0.5s ease-in, height 0.5s ease-in; /* Ensure consistent transition properties for compressed state */
-}
 
-.column.expanded {
-    transition: flex 5s ease-in, height 0.5s ease-in; /* Faster transition for compressing */
-}
 
 .expanded {
     flex: 1000; /* Expanded column takes more space */
@@ -47,7 +41,6 @@ h1, h2 {
     justify-content: center; /* Center horizontally */
     margin-bottom: 0.1vw; /* Add some bottom margin */
 }
-
 
 /* Change the font size of the title to 2vw when compressed */
 .column.compressed .column-title {
