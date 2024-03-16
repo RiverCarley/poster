@@ -16,6 +16,7 @@ $(document).ready(function(){
             $(".column-title").removeClass("vertical");
             // Hide all images except the first one in each column
             $(".column.compressed .images").css("height", 0);
+            console.log("Column compressed"); // Debug log
         } else {
             // Toggle the expanded/compressed class on the clicked column
             clickedColumn.toggleClass("expanded").removeClass("compressed");
@@ -35,13 +36,20 @@ $(document).ready(function(){
                     $(this).find(".images").css("height", "auto");
                 }
             });
+            console.log("Column expanded"); // Debug log
         }
     }
 
-    // Click and touch event handler for columns with debug log
-    $(".column").on("click touchend", function(e){
-        e.preventDefault(); // Prevent default click or touch behavior
+    // Click event handler for columns
+    $(".column").on("click", function(){
         console.log("Column clicked"); // Debug log
+        handleColumnClick($(this));
+    });
+
+    // Touch event handler for columns
+    $(".column").on("touchend", function(e){
+        e.preventDefault(); // Prevent default touch behavior
+        console.log("Column touched"); // Debug log
         handleColumnClick($(this));
     });
 
