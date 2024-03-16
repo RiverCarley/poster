@@ -14,7 +14,7 @@ html, body {
     background-color: #f0f0f0;
     border: 1px solid #ccc;
     padding: 1px;
-    transition: flex 5s ease;
+    transition: flex 0.5s ease;
     cursor: pointer;
     display: flex; /* Use flexbox for column layout */
     flex-direction: column; /* Arrange items in a column */
@@ -39,7 +39,7 @@ h1, h2 {
     text-align: center;
     font-weight: bold;
     font-size: 3vw;
-    transition: transform 5s ease;
+    transition: transform 0.5s ease;
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
