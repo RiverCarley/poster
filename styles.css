@@ -40,6 +40,7 @@ h1, h2 {
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
     margin-bottom: 0.1vw; /* Add some bottom margin */
+    /*************************************************weird************/
     white-space: nowrap; /* Ensure the title remains on a single line */
 }
 
