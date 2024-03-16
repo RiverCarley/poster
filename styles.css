@@ -68,7 +68,7 @@ h1, h2 {
 
 /* Adjust the position of images in the second column */
 .column:nth-child(2) .images img {
-    top: 0px; /* Adjust this value as needed */
+    top: 0vw; /* Adjust this value as needed */
 }
 
 /* Adjust the position of images in other columns */
