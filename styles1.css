@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+}
+
+.column {
+    flex: 1;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    transition: flex 0.5s ease;
+}
+
+.expanded {
+    flex: 30;
+}
