@@ -42,6 +42,12 @@ $(document).ready(function(){
             // Allow default behavior for links
             return;
         }
+        // Check if the clicked column is already expanded
+        var isExpanded = $(this).hasClass("expanded");
+        if (!isExpanded) {
+            // Collapse the expanded column if any
+            $(".column.expanded").removeClass("expanded").addClass("compressed");
+        }
         // Prevent default touch behavior for columns
         e.preventDefault();
         console.log("Column clicked"); // Debug log
