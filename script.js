@@ -37,7 +37,13 @@ $(document).ready(function(){
 
     // Click event handler for columns
     $(".column").on("click touchend", function(e){
-        e.preventDefault(); // Prevent default touch behavior
+        // Check if the click was on a link
+        if ($(e.target).is("a")) {
+            // Allow default behavior for links
+            return;
+        }
+        // Prevent default touch behavior for columns
+        e.preventDefault();
         console.log("Column clicked"); // Debug log
         handleColumnClick($(this));
     });
