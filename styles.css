@@ -17,22 +17,20 @@ html, body {
     cursor: pointer;
     display: flex;
     flex-direction: column;
-    transition: flex 0.5s ease, height 0.5s ease; /* Add transition for flex property */
+    transition: flex 0.5s ease-in, height 0.5s ease-in; /* Add transition for flex property */
 }
 
 .column.compressed {
-    transition: flex 0.5s ease, height 0.5s ease; /* Ensure consistent transition properties for compressed state */
+    transition: flex 0.5s ease-in, height 0.5s ease-in; /* Ensure consistent transition properties for compressed state */
 }
 
 .column.expanded {
-    transition: flex 30s ease, height 0.5s ease; /* Faster transition for compressing */
+    transition: flex 5s ease-in, height 0.5s ease-in; /* Faster transition for compressing */
 }
-
 
 .expanded {
     flex: 1000; /* Expanded column takes more space */
 }
-
 
 h1, h2 {
     font-size: 5vw;
@@ -44,7 +42,6 @@ h1, h2 {
     text-align: center;
     font-weight: bold;
     font-size: 2.5vw;
-  
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
@@ -56,12 +53,12 @@ h1, h2 {
     writing-mode: vertical-lr; /* Rotate the text vertically (for modern browsers) */
     text-orientation: sideways; /* Rotate the text vertically (for older browsers) */
     margin-top: 2vw;
-    
 }
+
 .column-title.horizontal {
     transform: rotate(0deg); /* Rotate the title vertically */
-
 }
+
 /* Change the font size of the title to 2vw when compressed */
 .column.compressed .column-title {
     font-size: 2vw;
@@ -80,7 +77,6 @@ h1, h2 {
 }
 
 .images img {
-    
     width: 100%;
     height: auto;
     position: absolute;
@@ -89,7 +85,7 @@ h1, h2 {
 
 /* Adjust the position of images in the second column */
 .column:nth-child(2) .images img {
-    top:0px; /* Adjust this value as needed */
+    top: 0px; /* Adjust this value as needed */
 }
 
 /* Adjust the position of images in other columns */
@@ -107,7 +103,6 @@ h1, h2 {
     top: 0;
 }
 
-/* Set the height of images to 0 when the column is compressed */
 /* Set the height of images to 0 when the column is compressed */
 .column.compressed .images img {
     height: 0;
@@ -136,4 +131,3 @@ h1, h2 {
     cursor: pointer;
     font-size: 20px;
 }
-
