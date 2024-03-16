@@ -37,13 +37,10 @@ $(document).ready(function(){
 
     // Click event handler for columns
     $(".column").on("click touchend", function(e){
-        if ($(e.target).hasClass('column')) {
-            e.preventDefault(); // Prevent default touch behavior only if the click was on the column itself
-            console.log("Column clicked"); // Debug log
-            handleColumnClick($(this));
-        }
+        e.preventDefault(); // Prevent default touch behavior
+        console.log("Column clicked"); // Debug log
+        handleColumnClick($(this));
     });
-    
 
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");
