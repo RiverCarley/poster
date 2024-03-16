@@ -22,6 +22,9 @@ html, body {
 
 
 
+.expanded {
+    flex: 300; /* Expanded column takes more space */
+}
 
 
 h1, h2 {
