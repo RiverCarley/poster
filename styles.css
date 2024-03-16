@@ -51,7 +51,7 @@ h1, h2 {
     transform: rotate(-90deg); /* Rotate the title vertically */
     writing-mode: vertical-lr; /* Rotate the text vertically (for modern browsers) */
     text-orientation: sideways; /* Rotate the text vertically (for older browsers) */
-    margin-top: 5vw;
+    margin-top: 15vw;
     
 }
 .column-title.horizontal {
