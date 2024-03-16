@@ -44,7 +44,7 @@ h1, h2 {
     text-align: center;
     font-weight: bold;
     font-size: 2.5vw;
-    transition: transform 10s ease;
+  
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
@@ -80,6 +80,7 @@ h1, h2 {
 }
 
 .images img {
+    
     width: 100%;
     height: auto;
     position: absolute;
@@ -134,5 +135,8 @@ h1, h2 {
     color: white;
     cursor: pointer;
     font-size: 20px;
+}
+.hidden-images img {
+    display: none;
 }
 
