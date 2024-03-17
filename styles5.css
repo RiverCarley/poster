@@ -33,17 +33,17 @@
 
 /* Adjust the margin-top for images in column1 */
 .column:nth-child(1) .images {
-    margin-top: 0vw; /* Adjust the margin-top value as needed */
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
 }
 
 /* Adjust the margin-top for images in column3 */
 .column:nth-child(3) .images {
-    margin-top: 0vw; /* Adjust the margin-top value as needed */
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
 }
 
 /* Adjust the margin-top for images in column4 */
 .column:nth-child(4) .images {    
-    margin-top: 0vw; /* Adjust the margin-top value as needed */
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
 }
 
 .expanded {
@@ -65,9 +65,7 @@ h1, h2 {
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
-    margin-bottom: 0.1vw; /* Add some bottom margin */
-        /*************************************************weird************/
-        white-space: nowrap; /* Ensure the title remains on a single line */
+ 
 }
 .column.compressed .images img {
     height: 0;
