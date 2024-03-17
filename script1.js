@@ -1,9 +1,9 @@
 $(document).ready(function() {
     // Image animation
     $('.moving-image').each(function() {
-        var randomTop = Math.floor(Math.random() * 1000) + 10; // Random top position between 10% and 90%
+        var randomTop = Math.floor(Math.random() * 1500) + 10; // Random top position between 10% and 90%
         $(this).css({
-            top: randomTop + '%',
+            top: randomTop ,
             left: '-100%', // Start position off-screen to the left
             opacity: 0, // Set initial opacity to 0
             display: 'none' // Hide the image initially
@@ -15,7 +15,7 @@ $(document).ready(function() {
     function animateImage(image) {
         var randomDuration = Math.floor(Math.random() * 8000) + 3000; // Random duration between 3000ms and 11000ms
         var windowWidth = $(window).width();
-        var endPosition = windowWidth / 1.25; // End position at half the width of the window
+        var endPosition = windowWidth / 1.45; // End position at half the width of the window
         var fadeStartPosition = endPosition * 0.1; // Start fading in when image is 10% done with loop
         var fadeEndPosition = endPosition * 0.9; // Start fading out when image is 90% done with loop
         image.animate({left: endPosition}, {
@@ -41,7 +41,7 @@ $(document).ready(function() {
             },
             complete: function() {
                 // Calculate new random position
-                var randomTop = Math.floor(Math.random() * 1000) + 10; // Random top position between 10% and 90%
+                var randomTop = Math.floor(Math.random() * 1500) + 10; // Random top position between 10% and 90%
 
                 image.css({
                     top: randomTop, // Set new random top position
@@ -60,14 +60,20 @@ $(document).ready(function() {
     $('.image-container2').click(function() {
         $('#popup2').fadeIn();
     });
+    $('.image-container3').click(function() {
+        $('#popup3').fadeIn();
+    });
+    $('.image-container4').click(function() {
+        $('#popup4').fadeIn();
+    });
     $('.close').click(function() {
-        $('#popup, #popup2').fadeOut();
+        $('#popup, #popup2,#popup3,#popup4').fadeOut();
     });
 
     // Close popups when clicking outside of them
     $(document).click(function(event) {
         if (!$(event.target).closest('.popup-content, .moving-image').length) {
-            $('#popup, #popup2').fadeOut();
+            $('#popup, #popup2,#popup3,#popup4').fadeOut();
         }
     });
 
