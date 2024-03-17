@@ -1,6 +1,6 @@
 .container {
     display: flex;
-    height: 100%; /* Extend container to full height of the page */
+    height: auto; /* Extend container to full height of the page */
 }
 
 .column {
