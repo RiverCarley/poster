@@ -2,6 +2,7 @@
     width: 100%;
     overflow: hidden;
     position: relative;
+    min-height: 2000px; /* Set a minimum height of 1000 pixels */
 }
 
 .slide {
@@ -22,7 +23,6 @@
 .text, h1, h2 {
     position: absolute;
     color: rgb(0, 0, 0);
- 
     width: 20vw; /* Set width to 20% of the viewport width */
     left: 72%; /* Same left position as text */
 }
@@ -34,10 +34,10 @@ h1 {
 
 h2 {
     top: 5vw;
-    font-size:1.5vw ; /* Adjust top position of h2 to appear below h1 */
+    font-size: 1.5vw; /* Adjust top position of h2 to appear below h1 */
 }
 
-.text{
+.text {
     position: absolute;
     top: 8vw;
     font-size: 1vw;
