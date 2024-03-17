@@ -15,7 +15,7 @@ $(document).ready(function() {
     function animateImage(image) {
         var randomDuration = Math.floor(Math.random() * 8000) + 3000; // Random duration between 3000ms and 11000ms
         var windowWidth = $(window).width();
-        var endPosition = windowWidth / 1.45; // End position at half the width of the window
+        var endPosition = windowWidth / 1.5; // End position at half the width of the window
         var fadeStartPosition = endPosition * 0.1; // Start fading in when image is 10% done with loop
         var fadeEndPosition = endPosition * 0.9; // Start fading out when image is 90% done with loop
         image.animate({left: endPosition}, {
