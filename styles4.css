@@ -1,9 +1,3 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
     display: flex;
     height: 100%; /* Extend container to full height of the page */
@@ -20,12 +14,33 @@ html, body {
     position: relative; /* Position images relative to the column */
 }
 
+.images {
+    flex: 1; /* Make the image span the whole compressed column */
+    display: flex; /* Use flexbox for image layout */
+    flex-direction: column; /* Arrange images in a column */
+    align-items: center; /* Center images vertically */
+}
+
 .images img {
     width: 100%;
     height: auto;
     margin-bottom: 10px; /* Adjust vertical spacing between images */
 }
 
+/* Adjust the margin-top for images in column1 */
+.column:nth-child(1) .images {
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
+}
+
+/* Adjust the margin-top for images in column3 */
+.column:nth-child(3) .images {
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
+}
+
+/* Adjust the margin-top for images in column4 */
+.column:nth-child(4) .images {    
+    margin-top: 2.82vw; /* Adjust the margin-top value as needed */
+}
 
 .expanded {
     flex: 1000; /* Expanded column takes more space */
@@ -45,8 +60,10 @@ h1, h2 {
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
     margin-bottom: 0.1vw; /* Add some bottom margin */
-    /*************************************************weird************/
-    white-space: nowrap; /* Ensure the title remains on a single line */
+}
+.column.compressed .images img {
+    height: 0;
+    visibility: hidden;
 }
 
 /* Change the font size of the title to 2vw when compressed */
@@ -56,46 +73,6 @@ h1, h2 {
 
 .content {
     display: flex; /* Use flexbox for content layout */
-}
-
-.images {
-    flex: 1; /* Make the image span the whole compressed column */
-    display: flex; /* Use flexbox for image layout */
-    flex-direction: column; /* Arrange images in a column */
-    align-items: center; /* Center images vertically */
-  
-}
-
-.images img {
-    width: 100%;
-    height: auto;
-
-}
-
-/* Adjust the position of images in the second column */
-.column:nth-child(2) .images img {
-    top: 0vw; /* Adjust this value as needed */
-}
-
-/* Adjust the position of images in other columns */
-.column .images img {
-    top: 0vw; /* Adjust this value as needed */
-}
-
-/* Set the top value of images in the second column to 0 when expanded */
-.column.expanded:nth-child(2) .images img {
-    top: 0;
-}
-
-/* Set the top value of images in other columns to 0 when expanded */
-.column.expanded .images img {
-    top: 0;
-}
-
-/* Set the height of images to 0 when the column is compressed */
-.column.compressed .images img {
-    height: 0;
-    visibility: hidden;
 }
 
 .text {
