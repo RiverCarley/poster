@@ -39,7 +39,7 @@ $(document).ready(function(){
     }
 
     // Click event handler for columns
-    $(".column").on("click touchend", function(e){
+    $(".column").on("click", function(e){
         // Check if the click was on a link
         if ($(e.target).is("a")) {
             // Allow default behavior for links
