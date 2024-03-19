@@ -11,7 +11,6 @@ body {
 .column {
     flex: 1;
     background-color: #779197;
-    padding: 0.1vw;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -39,7 +38,7 @@ body {
 .images img {
     width: 100%;
     height: auto;
-    margin-bottom: 10px; /* Adjust vertical spacing between images */
+     /* Adjust vertical spacing between images */
 }
 
 /* Adjust the margin-top for images in column1 */
