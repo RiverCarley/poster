@@ -1,11 +1,11 @@
 body {
-    background-color: #196372;
+    background-color: #000000;
 }
 
 .container {
     display: flex;
     height: auto; /* Extend container to full height of the page */
-    background-color: #506266;
+ 
 }
 
 .column {
@@ -23,6 +23,9 @@ body {
     display: none;
   }
 
+  body::-webkit-scrollbar {
+    display: none;
+  }
 
 .images {
     flex: 1; /* Make the image span the whole compressed column */
@@ -64,9 +67,10 @@ body {
 
 h1, h2 {
     text-align: center;
-    font-family: "mason-sans", sans-serif;
+    font-family: "komet-sc", sans-serif;
     font-weight: 700;
     font-style: normal;
+    color:  #779197;
 }
 
 h1 {
@@ -76,7 +80,7 @@ h1 {
 h2 {
     margin-top: -2vw;
     margin-bottom: 1vw;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .column-title {
@@ -88,7 +92,7 @@ h2 {
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
     white-space: nowrap; /* Ensure the title remains on a single line */
-    font-family: "mason-sans", sans-serif;
+    font-family: "komet-sc", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -101,6 +105,7 @@ h2 {
 /* Change the font size of the title to 2vw when compressed */
 .column.compressed .column-title {
     font-size: 1.5vw;
+    margin-top: 1vw;
 }
 
 .content {
@@ -111,7 +116,7 @@ h2 {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
     font-size: 1.5vw;
-    font-family: "indivisible", sans-serif;
+    font-family: "komet-sc", sans-serif;
     font-weight: 200;
     font-style: normal;
     margin-left: 0.5vw;
