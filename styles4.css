@@ -12,12 +12,15 @@ background-color: #196372;
 .column {
     flex: 1;
     background-color: #779197;
-    border: 0.1vw solid #000000;
+   
     padding: 0.1vw;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
+}
+.images::-webkit-scrollbar-track {
+    background-color: #196372; /* Desired background color */
 }
 
 .images {
@@ -25,7 +28,8 @@ background-color: #196372;
     display: flex; /* Use flexbox for image layout */
     flex-direction: column; /* Arrange images in a column */
     align-items: center; /* Center images vertically */
-    overflow: scroll;
+    overflow-y: scroll; /* Enable vertical scrolling */
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
 
 }
