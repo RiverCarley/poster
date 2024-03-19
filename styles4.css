@@ -17,21 +17,25 @@ body {
     flex-direction: column;
     position: relative; /* Position images relative to the column */
 }
+.images::-webkit-scrollbar {
+    display: none;
+  }
+  .expanded::-webkit-scrollbar {
+    display: none;
+  }
 
-.images::-webkit-scrollbar-track {
-    background-color: #196372; /* Desired background color */
-}
 
 .images {
     flex: 1; /* Make the image span the whole compressed column */
     display: flex; /* Use flexbox for image layout */
     flex-direction: column; /* Arrange images in a column */
     align-items: center; /* Center images vertically */
-    overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
 }
-
+.expanded .images {
+    overflow-y: auto; /* Allow scrollbar to appear when expanded */
+}
 .images img {
     width: 100%;
     height: auto;
