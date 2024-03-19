@@ -18,7 +18,6 @@ $(document).ready(function(){
             $(".column").removeClass("expanded").addClass("compressed");
             // Toggle the expanded/compressed class on the clicked column
             clickedColumn.addClass("expanded").removeClass("compressed");
-            // Toggle the writing-mode property on the column title based on the column's state
             $(".column").each(function() {
                 var isCompressed = $(this).hasClass("compressed");
                 $(this).find(".column-title").css("writing-mode", isCompressed ? "vertical-lr" : "");
@@ -63,11 +62,9 @@ $(document).ready(function(){
     // Ensure that no column is initially expanded or compressed
     $(".column").removeClass("expanded compressed");
 
-    // Function to cycle images
-    function cycleImages() {
-        // This function is removed as the slideshow is no longer present
-    }
 
-    // Hide all images initially
-
+    // Event listener for images to prevent column compression
+    $(".column .images img").on("click", function(e) {
+        e.stopPropagation(); // Stop event propagation to parent column
+    });
 });

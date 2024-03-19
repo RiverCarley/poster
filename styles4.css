@@ -66,6 +66,7 @@ body {
 }
 
 h1, h2 {
+    margin-top: 1vw;
     text-align: center;
     font-family: "owners", sans-serif;
     font-weight: 700;
@@ -96,6 +97,9 @@ h2 {
     font-weight: 500;
     font-style: normal;
 }
+.column-title:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
 
 .column.compressed .images img {
     height: 0;
@@ -115,7 +119,7 @@ h2 {
 .text {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
-    font-size: 1.5vw;
+    font-size: 1.2vw;
     font-family: "owners", sans-serif;
     font-weight: 200;
     font-style: normal;
