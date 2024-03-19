@@ -1,13 +1,18 @@
+body{
+background-color: #196372;
+
+}
 .container {
     display: flex;
     height: auto; /* Extend container to full height of the page */
+    background-color: #506266;
 }
 
 
 .column {
     flex: 1;
-    background-color: #f0f0f0;
-    border: 0.1vw solid #ccc;
+    background-color: #779197;
+    border: 0.1vw solid #000000;
     padding: 0.1vw;
     cursor: pointer;
     display: flex;
@@ -21,7 +26,7 @@
     flex-direction: column; /* Arrange images in a column */
     align-items: center; /* Center images vertically */
     overflow: scroll;
-    height: 51vh;
+    height: 65vh;
 
 }
 
@@ -49,25 +54,39 @@
 .expanded {
     flex: 1000; /* Expanded column takes more space */
     overflow: scroll;
-    height: 51vh;
+    height: 71.5vh;
 }
 
 h1, h2 {
-    font-size: 5vw;
     text-align: center;
+    font-family: "mason-sans", sans-serif;
+font-weight: 700;
+font-style: normal;
+
+}
+h1{
+font-size: 5vw;
+}
+h2{
+    margin-top: -2vw;
+    margin-bottom: 1vw;
+font-size: 4vw;
 }
 
 .column-title {
     width: 100%;
     text-align: center;
     font-weight: bold;
-    font-size: 2.5vw;
+    font-size: 2vw;
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
-    margin-bottom: 0.1vw; /* Add some bottom margin */
+    
         /*************************************************weird************/
         white-space: nowrap; /* Ensure the title remains on a single line */
+        font-family: "mason-sans", sans-serif;
+font-weight: 500;
+font-style: normal;
 }
 .column.compressed .images img {
     height: 0;
@@ -76,7 +95,7 @@ h1, h2 {
 
 /* Change the font size of the title to 2vw when compressed */
 .column.compressed .column-title {
-    font-size: 2vw;
+    font-size: 1.5vw;
 }
 
 .content {
@@ -87,6 +106,10 @@ h1, h2 {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
     font-size: 1.5vw;
+    font-family: "indivisible", sans-serif;
+font-weight: 200;
+font-style: normal;
+    margin-left: 0.5vw;
 }
 
 .compressed .text {
