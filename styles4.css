@@ -1,24 +1,23 @@
-body{
-background-color: #196372;
-
+body {
+    background-color: #196372;
 }
+
 .container {
     display: flex;
     height: auto; /* Extend container to full height of the page */
     background-color: #506266;
 }
 
-
 .column {
     flex: 1;
     background-color: #779197;
-   
     padding: 0.1vw;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
 }
+
 .images::-webkit-scrollbar-track {
     background-color: #196372; /* Desired background color */
 }
@@ -31,7 +30,6 @@ background-color: #196372;
     overflow-y: scroll; /* Enable vertical scrolling */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
-
 }
 
 .images img {
@@ -64,17 +62,18 @@ background-color: #196372;
 h1, h2 {
     text-align: center;
     font-family: "mason-sans", sans-serif;
-font-weight: 700;
-font-style: normal;
+    font-weight: 700;
+    font-style: normal;
+}
 
+h1 {
+    font-size: 5vw;
 }
-h1{
-font-size: 5vw;
-}
-h2{
+
+h2 {
     margin-top: -2vw;
     margin-bottom: 1vw;
-font-size: 4vw;
+    font-size: 4vw;
 }
 
 .column-title {
@@ -85,13 +84,12 @@ font-size: 4vw;
     display: flex;
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
-    
-        /*************************************************weird************/
-        white-space: nowrap; /* Ensure the title remains on a single line */
-        font-family: "mason-sans", sans-serif;
-font-weight: 500;
-font-style: normal;
+    white-space: nowrap; /* Ensure the title remains on a single line */
+    font-family: "mason-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
 }
+
 .column.compressed .images img {
     height: 0;
     visibility: hidden;
@@ -111,8 +109,8 @@ font-style: normal;
     display: none; /* Hide the text by default */
     font-size: 1.5vw;
     font-family: "indivisible", sans-serif;
-font-weight: 200;
-font-style: normal;
+    font-weight: 200;
+    font-style: normal;
     margin-left: 0.5vw;
 }
 
