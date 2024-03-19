@@ -67,7 +67,7 @@ body {
 
 h1, h2 {
     text-align: center;
-    font-family: "komet-sc", sans-serif;
+    font-family: "owners", sans-serif;
     font-weight: 700;
     font-style: normal;
     color:  #779197;
@@ -92,7 +92,7 @@ h2 {
     align-items: flex-start; /* Align title to the start of its container vertically */
     justify-content: center; /* Center horizontally */
     white-space: nowrap; /* Ensure the title remains on a single line */
-    font-family: "komet-sc", sans-serif;
+    font-family: "owners", sans-serif;
     font-weight: 500;
     font-style: normal;
 }
@@ -116,7 +116,7 @@ h2 {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
     font-size: 1.5vw;
-    font-family: "komet-sc", sans-serif;
+    font-family: "owners", sans-serif;
     font-weight: 200;
     font-style: normal;
     margin-left: 0.5vw;
