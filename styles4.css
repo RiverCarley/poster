@@ -69,7 +69,7 @@ h1, h2 {
     margin-top: 1vw;
     text-align: center;
     font-family: "owners", sans-serif;
-    font-weight: 700;
+    font-weight: 1000;
     font-style: normal;
     color:  #779197;
 }
@@ -98,6 +98,9 @@ h2 {
     font-style: normal;
 }
 .column-title:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
+a:hover {
     color: #FFFFFF; /* Change to your desired color */
 }
 
