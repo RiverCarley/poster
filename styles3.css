@@ -1,107 +1,133 @@
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
+body {
+    background-color: #000000;
 }
 
 .container {
     display: flex;
     height: auto; /* Extend container to full height of the page */
+ 
 }
 
 .column {
     flex: 1;
-    background-color: #f0f0f0;
-    border: 0.1vw solid #ccc;
-    padding: 0.1vw;
+    background-color: #77977a;
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
 }
+.images::-webkit-scrollbar {
+    display: none;
+  }
+  .expanded::-webkit-scrollbar {
+    display: none;
+  }
 
-.images img {
-    width: 100%;
-    height: auto;
-    margin-bottom: 10px; /* Adjust vertical spacing between images */
-}
-
-
-.expanded {
-    flex: 1000; /* Expanded column takes more space */
-}
-
-h1, h2 {
-    font-size: 5vw;
-    text-align: center;
-}
-
-.column-title {
-    width: 100%;
-    text-align: center;
-    font-weight: bold;
-    font-size: 2.5vw;
-    display: flex;
-    align-items: flex-start; /* Align title to the start of its container vertically */
-    justify-content: center; /* Center horizontally */
-    margin-bottom: 0.1vw; /* Add some bottom margin */
-    /*************************************************weird************/
-    white-space: nowrap; /* Ensure the title remains on a single line */
-}
-
-/* Change the font size of the title to 2vw when compressed */
-.column.compressed .column-title {
-    font-size: 2vw;
-}
-
-.content {
-    display: flex; /* Use flexbox for content layout */
-}
+  body::-webkit-scrollbar {
+    display: none;
+  }
 
 .images {
     flex: 1; /* Make the image span the whole compressed column */
     display: flex; /* Use flexbox for image layout */
     flex-direction: column; /* Arrange images in a column */
     align-items: center; /* Center images vertically */
-  
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+    height: 65vh;
+    
 }
-
+.expanded .images {
+    overflow-y: auto; /* Allow scrollbar to appear when expanded */
+}
 .images img {
     width: 100%;
     height: auto;
-
+     /* Adjust vertical spacing between images */
 }
 
-/* Adjust the position of images in the second column */
-.column:nth-child(2) .images img {
-    top: 0vw; /* Adjust this value as needed */
+/* Adjust the margin-top for images in column1 */
+.column:nth-child(1) .images {
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
 }
 
-/* Adjust the position of images in other columns */
-.column .images img {
-    top: 0vw; /* Adjust this value as needed */
+/* Adjust the margin-top for images in column3 */
+.column:nth-child(3) .images {
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
 }
 
-/* Set the top value of images in the second column to 0 when expanded */
-.column.expanded:nth-child(2) .images img {
-    top: 0;
+/* Adjust the margin-top for images in column4 */
+.column:nth-child(4) .images {    
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
 }
 
-/* Set the top value of images in other columns to 0 when expanded */
-.column.expanded .images img {
-    top: 0;
+.expanded {
+    flex: 1000; /* Expanded column takes more space */
+    overflow: scroll;
+    height: 71.5vh;
 }
 
-/* Set the height of images to 0 when the column is compressed */
+h1, h2 {
+    margin-top: 1vw;
+    text-align: center;
+    font-family: "owners", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    color:  #779197;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    margin-top: -2vw;
+    margin-bottom: 1vw;
+    font-size: 3vw;
+}
+
+.column-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+    display: flex;
+    align-items: flex-start; /* Align title to the start of its container vertically */
+    justify-content: center; /* Center horizontally */
+    white-space: nowrap; /* Ensure the title remains on a single line */
+    font-family: "owners", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.column-title:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
+a:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
+
 .column.compressed .images img {
     height: 0;
     visibility: hidden;
 }
 
+/* Change the font size of the title to 2vw when compressed */
+.column.compressed .column-title {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+
+.content {
+    display: flex; /* Use flexbox for content layout */
+}
+
 .text {
     flex: 1; /* Fill remaining space */
     display: none; /* Hide the text by default */
-    font-size: 1.5vw;
+    font-size: 1.2vw;
+    font-family: "owners", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-left: 0.5vw;
 }
 
 .compressed .text {

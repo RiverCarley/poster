@@ -3,265 +3,343 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slideshow</title>
+    <title>Expandable Columns with Images</title>
     <link rel="stylesheet" type="text/css" href="styles2.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yia0djm.css">
+        <style>
+        /* CSS for modal popup */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 100px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0,0,0,0.5);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: auto;
+            max-height: 10vh;
+            max-width: 35vw;
+        }
+
+        .modal img {
+            width: 100%;
+            height: auto;
+        }
+
+        .close {
+            color: white;
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 35px;
+            font-weight: bold;
+        }
+
+        .close:hover,
+        .close:focus {
+            color: #999;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
-<h1>Research Methods of Graphic Design</h1>
-<h2>Fall 2023 Lecture Series</h2>
-<div class="slideshow">
-    <div class="slide" id="slide1">
-        <div class="image-column">
+    <h1>Research Methods of Graphic Design        </h1>
+    <h2>Fall 2023 Lecture Series</h2>
+    
+<div class="container">
+    <div class="column" id="column1">
+        <div class="column-title">Anther Kiley        </div>
+        <div class="content">
+        <div class="images">
             <img src="images/anther/1 (7).jpg" alt="Image 1">
-            <img src="images/anther/1 (8).jpg" alt="Image 2">
-            <img src="images/anther/1 (9).jpg" alt="Image 3">
-            <img src="images/anther/ae_2016-10-581ef_oct15_sierranevadacollege_image.jpg,1600" alt="Image 4">
-            <img src="images/anther/Anther-6-2200x1467.jpg" alt="Image 5">
+            <img src="images/anther/1 (8).jpg" alt="Image 1">
+            <img src="images/anther/1 (9).jpg" alt="Image 1">
+            <img src="images/anther/ae_2016-10-581ef_oct15_sierranevadacollege_image.jpg,1600" alt="Image 1">
+            <img src="images/anther/Anther-6-2200x1467.jpg" alt="Image 1">
+            <img src="images/anther2/building-abstracts-1.jpg" alt="Image 1">
+            <img src="images/anther2/building-abstracts-2.jpg" alt="Image 1">
+            <img src="images/anther2/cardkits-1.jpg" alt="Image 1">
+            <img src="images/anther2/cardkits-2.jpg" alt="Image 1">
+            <img src="images/anther2/cardkits-3.jpg" alt="Image 1">
+            <img src="images/anther2/cardkits-4.jpg" alt="Image 1">
+            <img src="images/anther2/collages-1.jpg" alt="Image 1">
+            <img src="images/anther2/collages-2.jpg" alt="Image 1">
+            <img src="images/anther2/critical-issues-1.jpg" alt="Image 1">
+            <img src="images/anther2/facades-2.jpg" alt="Image 1">
+            <img src="images/anther2/facades-3.jpg" alt="Image 1">
+            <img src="images/anther2/foreign-architecture-1.jpg" alt="Image 1">
+            <img src="images/anther2/foreign-architecture-3.jpg" alt="Image 1">
+            <img src="images/anther2/foreign-architecture-4.jpg" alt="Image 1">
+            <img src="images/anther2/lennox-1.jpg" alt="Image 1">
+            <img src="images/anther2/messenger-1.jpg" alt="Image 1">
+            <img src="images/anther2/ravi-1.jpg" alt="Image 1">
+            <img src="images/anther2/risd-global-1.jpg" alt="Image 1">
+            <img src="images/anther2/small-worlds-1.jpg" alt="Image 1">
         </div>
         <div class="text">
-            <h3>Anther Kiley</h3>
-            <h4>September 25, 2023<br>
+            <p>September 25, 2023,<br>
                 3:10pm<br>
-                100 McCaul St., Room 230<br></h4>
-            <p>Anther Kiley is a designer, artist, and educator living and practicing in Providence, RI. He teaches in the graphic design department at RISD while maintaining a professional graphic design practice and a robust studio art practice. If that’s not enough he also runs Card Kits—a line of sustainable architectural children’s toys inspired by own childhood. His work explores the symbolic and poetic aspects of functionalist forms in the built environment through sculpture, photography, digital image making, and collage.
-            </p>
-            <a href="http://antherkiley.com/" target="_blank">Visit Anther Kiley's Website</a>
-
-        </div>
+                100 McCaul St., Room 230<br>
+                <br>
+                Anther Kiley is a designer, artist, and educator living and practicing in Providence, RI. He teaches in the graphic design department at RISD while maintaining a professional graphic design practice and a robust studio art practice. If that’s not enough he also runs Card Kits—a line of sustainable architectural children’s toys inspired by own childhood. His work explores the symbolic and poetic aspects of functionalist forms in the built environment through sculpture, photography, digital image making, and collage.</p>
+                <p>Visit <a href="http://antherkiley.com/index.html" target="_blank">antherkiley.com</a></p>
+               
+            </div>
     </div>
-    <div class="slide" id="slide2">
-        <div class="image-column">
+    </div>
+    <div class="column" id="column2">
+        <div class="column-title">Emi Takahashi & Michelle Kuan       </div>
+        <div class="content">
+        <div class="images">
             <img src="images/emi/4-1024x1280.png" alt="Image 2">
-            <img src="images/emi/7-1-1024x1280.jpg" alt="Image 1">
-            <img src="images/emi/ByunByun1-1024x1024.jpg" alt="Image 1">
-            <img src="images/emi/J5-1024x712.jpg" alt="Image 1">
-            <img src="images/emi/SD_1-1024x1024.jpg" alt="Image 1">
+            <img src="images/emi/7-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi/ByunByun1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi/J5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi/SD_1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/01-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/01-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/02-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/02-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/03-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/03-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/04-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/04-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/05-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/05-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/06-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/06-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/07-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/07-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/08-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/08-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/09-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/1-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/1.mp4" alt="Image 2">
+            <img src="images/emi2/10-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/10.mp4" alt="Image 2">
+            <img src="images/emi2/11-1024x1280.png" alt="Image 2">
+            <img src="images/emi2/2-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/2-1-1024x1280.png" alt="Image 2">
+            <img src="images/emi2/2-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/2-1024x1280.png" alt="Image 2">
+            <img src="images/emi2/2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/3-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/3-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/4-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/5-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/5-1-1024x1280.png" alt="Image 2">
+            <img src="images/emi2/6-1-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/6-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/07-1-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/7-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/8-1024x1280.png" alt="Image 2">
+            <img src="images/emi2/Analog-04.gif" alt="Image 2">
+            <img src="images/emi2/AT.mp4" alt="Image 2">
+            <img src="images/emi2/AT1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/AT10-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/AT3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/AT6-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/AT8-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/AT9jpg-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/book1-scaled.jpg" alt="Image 2">
+            <img src="images/emi2/ByunByun3-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/C1-copy-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E6-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E7-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E8-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/E9-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f0-1024x712 (1).jpg" alt="Image 2">
+            <img src="images/emi2/f1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/f8-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/I1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/j8-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/J2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/J3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/J4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/J5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/J6-1024x712 (1).jpg" alt="Image 2">
+            <img src="images/emi2/KACHI-BUWA-Onomatopoeic-Zines-1024x692.jpg" alt="Image 2">
+            <img src="images/emi2/kb1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb10-1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb11-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb12-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb14-16-1024x713.jpg" alt="Image 2">
+            <img src="images/emi2/kb17-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb18-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb19-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb2.3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb20-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/kb9-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/KB13-16-1024x713.jpg" alt="Image 2">
+            <img src="images/emi2/KB_newspaper.gif" alt="Image 2">
+            <img src="images/emi2/LeafGall3.jpg" alt="Image 2">
+            <img src="images/emi2/MV1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/MV3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Pic1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/posters-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/SD_2-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/SD_3-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/SD_4-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/SD_5-1024x1024.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines-_21-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines6-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Seeing-lines7-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/typespecimen_1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-10-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-11-1024x712 (1).jpg" alt="Image 2">
+            <img src="images/emi2/Vector-2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-3-1024x712 (1).jpg" alt="Image 2">
+            <img src="images/emi2/Vector-4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Vector-6-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/VF_Web_1.mp4" alt="Image 2">
+            <img src="images/emi2/W1-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W10-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W11-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W6-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W8-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/W9-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Web-1024x1280.jpg" alt="Image 2">
+            <img src="images/emi2/Web-14-1024x712 (1).jpg" alt="Image 2">
+            <img src="images/emi2/Web-16-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/Web-15-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WEB2.mp4" alt="Image 2">
+            <img src="images/emi2/WGLG-0-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WGLG-2-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WGLG-3-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WGLG-4-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WGLG-5-1024x712.jpg" alt="Image 2">
+            <img src="images/emi2/WGLG1-1024x712.jpg" alt="Image 2">
+            
         </div>
-        <div class="text"><h3>Emi Takahashi & Michelle Kuan</h3>
-            <h4>October 23, 2023<br>
+        <div class="text">
+            <p>October 23, 2023<br>
                 3:10pm<br>
-                100 McCaul St., Room 230<br></h4>
-            <p>Emi Takahashi is an artist and graphic designer based in Toronto. Her practice involves experimenting with alternative & analog forms of image-making, glyph & type design, archival projects, and multidisciplinary collaborations. Michelle Kuan is a Chinese Canadian artist, designer, and writer based in Montréal. Working between social practice, digital arts, and experimental publishing, she explores novel ways of documenting personal and collective narratives, the power of somatic memory, and decolonial archival futures. Their research laden practices operate both individually and collectively to create a mix of client-based and self-initiated work such as their here-there stories project devoted to collecting the stories of the asian canadian diaspora.</p>
-            <a href="https://emitakahashi.ca/" target="_blank">Visit Emi Takahashi's Website</a>
-</div>
+                100 McCaul St., Room 230<br>
+                <br>
+                Emi Takahashi is an artist and graphic designer based in Toronto. Her practice involves experimenting with alternative & analog forms of image-making, glyph & type design, archival projects, and multidisciplinary collaborations. Michelle Kuan is a Chinese Canadian artist, designer, and writer based in Montréal. Working between social practice, digital arts, and experimental publishing, she explores novel ways of documenting personal and collective narratives, the power of somatic memory, and decolonial archival futures. Their research laden practices operate both individually and collectively to create a mix of client-based and self-initiated work such as their here-there stories project devoted to collecting the stories of the asian canadian diaspora.</p>
+                <p>Visit <a href="https://emitakahashi.ca/"" target="_blank">emitakahashi.ca</a></p>
+            </div>
     </div>
-    <div class="slide" id="slide3">
-        <div class="image-column">
+    </div>
+    <div class="column" id="column3">
+        <div class="column-title">E Roon Kang        </div>
+        <div class="content">
+        <div class="images">
             <img src="images/eroon/1-10-100-0-2400x-q90.jpg" alt="Image 3">
-            <img src="images/eroon/gf-full-2400x-q90.png" alt="Image 1">
-            <img src="images/eroon/apap-1-2400x-q90.jpg" alt="Image 1">
-            <img src="images/eroon/isopt-0-2400x-q90.png" alt="Image 1">
-            <img src="images/eroon/mlid-og-2400x-q90.jpg" alt="Image 1">
+            <img src="images/eroon/apap-1-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon/gf-full-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon/isopt-0-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon/mlid-og-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/1-10-100-3-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/4y7a8376-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/apap-posters-3-2400x-q90.gif" alt="Image 3">
+            <img src="images/eroon2/apap-posters-4-2400x-q90.gif" alt="Image 3">
+            <img src="images/eroon2/apapid-1-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/framework-4-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/fso-1-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/korean-internet-1-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon2/korean-internet-9-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon2/logocolorvariations-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/ps1-1-2400x-q90.jpg" alt="Image 3">
+            <img src="images/eroon2/seoul-libre-maps-2-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon2/typojanchi-6-2400x-q90.png" alt="Image 3">
+            <img src="images/eroon2/venice-2-2400x-q90.jpg" alt="Image 3">
+   
+            
         </div>
-        <div class="text"><h3>E Roon Kang</h3>
-            <h4>November 13, 2023<br>
+        <div class="text">
+            <p>November 13, 2023<br>
                 3:10pm<br>
-                Via Zoom<br></h4>
-            <p>E Roon Kang operates Math Practice, an interdisciplinary design and research studio with interest in studying, evaluating, and criticizing everyday systems and their pursuit of efficiency. He is also a co-founder of 908A a research initiative and consultancy that focuses on constructing new design tools.
-
+                Via Zoom<br>
+                <br>
+                E Roon Kang operates Math Practice, an interdisciplinary design and research studio with interest in studying, evaluating, and criticizing everyday systems and their pursuit of efficiency. He is also a co-founder of 908A a research initiative and consultancy that focuses on constructing new design tools.
+                
                 E Roon is the Chair and Associate Professor of Graphic Design at California College of the Arts. Previously, he served as the director of BFA Communication Design at Parsons School of Design, from 2017 to 2020. He was appointed as TED Senior Fellow and worked as a research fellow at SENSEable City Laboratory of MIT.</p>
-            <a href="https://eroonkang.com/" target="_blank">Visit E Roon Kang's Website</a><br>
-            <a href="https://math-practice.org/" target="_blank">Visit Math Practice</a><br>
-            <a href="https://908a.org/" target="_blank">Visit 908a</a>
+                <p>Visit <a href="https://eroonkang.com/" target="_blank">eroonkang.com </a></p>
+                <p>Visit <a href="https://math-practice.org/" target="_blank">math-practice.org</a></p>
+                <p>Visit <a href="https://908a.org/" target="_blank">908a.org</a></p>
+            </div>
     </div>
     </div>
-    <div class="slide" id="slide4">
-        <div class="image-column">
-            <img src="images/sebastrain/1 (1).jpeg" alt="Image 3">
-            <img src="images/sebastrain/1 (1).jpg" alt="Image 1">
-            <img src="images/sebastrain/1 (6).jpg" alt="Image 1">
-            <img src="images/sebastrain/download.jpeg" alt="Image 1">
-            <img src="images/sebastrain/images.jpeg" alt="Image 1">
+    <div class="column" id="column4">
+        <div class="column-title">Sebastian Aubin        </div>
+        <div class="content">
+        <div class="images">
+            <img src="images/sebastrain/1 (1).jpg" alt="Image 4">
+            <img src="images/sebastrain/1 (1).jpeg" alt="Image 4">
+            <img src="images/sebastrain/download (1).jpeg" alt="Image 4">
+            <img src="images/sebastrain/download.jpeg" alt="Image 4">
+            <img src="images/sebastrain/images.jpeg" alt="Image 4">
+            <img src="images/sebastrain/SA_HB_LR_ActOfRollingSomething_01-1-scaled-1920x840.jpg" alt="Image 4">
+            <img src="images/sebastrain/SA_HB_LR_fart_01-2-scaled-1920x840.jpg" alt="Image 4">
         </div>
-        <div class="text"><h3>Sebastian Aubin</h3>
-            <h4>December 4, 2023<br>
+        <div class="text">
+            <p>December 4, 2023<br>
                 3:10pm<br>
-                100 McCaul St., Room 230<br></h4>
-            <p>Aubin has done publications for numerous artists, organizations and art galleries in Winnipeg, Montréal and Ottawa, including Plug In ICA Close Encounters, the next 500 years, Terrance Houle, KC Adams, Carleton University Art Gallery, Thunder Bay Art Gallery, and Art Gallery of South Western Manitoba. Aubin is one of the founding members of the ITWÉ collective that is dedicated to research, creation, production and education of Aboriginal digital culture. Currently based in Montréal, QC, Sébastien Aubin is a proud member of the Opaskwayak Cree Nation in Manitoba.
-
-            </p>
-            <a href="https://saubin.ca/" target="_blank">Visit Sabastiran Aubin's Website</a>
+                100 McCaul St., Room 230<br>
+                <br>
+                Aubin has done publications for numerous artists, organizations and 1art galleries in Winnipeg, Montréal and Ottawa, including Plug In ICA Close Encounters, the next 500 years, Terrance Houle, KC Adams, Carleton University Art Gallery, Thunder Bay Art Gallery, and Art Gallery of South Western Manitoba. Aubin is one of the founding members of the ITWÉ collective that is dedicated to research, creation, production and education of Aboriginal digital culture. Currently based in Montréal, QC, Sébastien Aubin is a proud member of the Opaskwayak Cree Nation in Manitoba.</p>
+                <p>Visit <a href="https://saubin.ca/"" target="_blank">saubin.ca</a></p>
+            </div>
     </div>
 </div>
+</div>
 
+   <!-- Modal Popup -->
+   <div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <div class="modal-content">
+        <img id="modalImage" src="" alt="Popup Image">
+    </div>
+</div>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="script2.js"></script>
+<script src="script4.js"></script>
 <script>
     $(document).ready(function(){
-        var currentSlide = 1;
-        var totalSlides = $('.slide').length;
-        var currentImage = 1;
-        var totalImages = $('#slide1 .image-column img').length;
-        var interval;
+        $(".images img").click(function(){
+            var imageUrl = $(this).attr("src");
+            $("#modalImage").attr("src", imageUrl);
+            $("#imageModal").css("display", "block");
+        });
 
-        function showSlide(index) {
-            $('.slide').hide();
-            $('#slide' + index).show();
-        }
+        $(".close").click(function(){
+            $("#imageModal").css("display", "none");
+        });
 
-        function showImage(index) {
-            $('#slide1 .image-column img').hide();
-            $('#slide1 .image-column img:nth-child(' + index + ')').show();
-        }
-
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > totalSlides) {
-                currentSlide = 1;
+        $(window).click(function(event) {
+            if (event.target == $("#imageModal")[0]) {
+                $("#imageModal").css("display", "none");
             }
-            showSlide(currentSlide);
-        }
-
-        function nextImage() {
-            currentImage++;
-            if (currentImage > totalImages) {
-                currentImage = 1;
-            }
-            showImage(currentImage);
-        }
-
-        function startSlideshow() {
-            interval = setInterval(nextImage, 1000); // Change image every 3 seconds (3000 milliseconds)
-        }
-
-  
-
-        showSlide(currentSlide); // Show the first slide initially
-        showImage(currentImage); // Show the first image initially
-        startSlideshow(); // Start the slideshow
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        var currentSlide = 1;
-        var totalSlides = $('.slide').length;
-        var currentImage = 1;
-        var totalImages = $('#slide2 .image-column img').length;
-        var interval;
-
-        function showSlide(index) {
-            $('.slide').hide();
-            $('#slide' + index).show();
-        }
-
-        function showImage(index) {
-            $('#slide2 .image-column img').hide();
-            $('#slide2 .image-column img:nth-child(' + index + ')').show();
-        }
-
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > totalSlides) {
-                currentSlide = 1;
-            }
-            showSlide(currentSlide);
-        }
-
-        function nextImage() {
-            currentImage++;
-            if (currentImage > totalImages) {
-                currentImage = 1;
-            }
-            showImage(currentImage);
-        }
-
-        function startSlideshow() {
-            interval = setInterval(nextImage, 1000); // Change image every 3 seconds (3000 milliseconds)
-        }
-
-      
-
-        showSlide(currentSlide); // Show the first slide initially
-        showImage(currentImage); // Show the first image initially
-        startSlideshow(); // Start the slideshow
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        var currentSlide = 1;
-        var totalSlides = $('.slide').length;
-        var currentImage = 1;
-        var totalImages = $('#slide3 .image-column img').length;
-        var interval;
-
-        function showSlide(index) {
-            $('.slide').hide();
-            $('#slide' + index).show();
-        }
-
-        function showImage(index) {
-            $('#slide3 .image-column img').hide();
-            $('#slide3 .image-column img:nth-child(' + index + ')').show();
-        }
-
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > totalSlides) {
-                currentSlide = 1;
-            }
-            showSlide(currentSlide);
-        }
-
-        function nextImage() {
-            currentImage++;
-            if (currentImage > totalImages) {
-                currentImage = 1;
-            }
-            showImage(currentImage);
-        }
-
-        function startSlideshow() {
-            interval = setInterval(nextImage, 1000); // Change image every 3 seconds (3000 milliseconds)
-        }
-
-
-        showSlide(currentSlide); // Show the first slide initially
-        showImage(currentImage); // Show the first image initially
-        startSlideshow(); // Start the slideshow
-    });
-</script>
-<script>
-    $(document).ready(function(){
-        var currentSlide = 1;
-        var totalSlides = $('.slide').length;
-        var currentImage = 1;
-        var totalImages = $('#slide4 .image-column img').length;
-        var interval;
-
-        function showSlide(index) {
-            $('.slide').hide();
-            $('#slide' + index).show();
-        }
-
-        function showImage(index) {
-            $('#slide4 .image-column img').hide();
-            $('#slide4 .image-column img:nth-child(' + index + ')').show();
-        }
-
-        function nextSlide() {
-            currentSlide++;
-            if (currentSlide > totalSlides) {
-                currentSlide = 1;
-            }
-            showSlide(currentSlide);
-        }
-
-        function nextImage() {
-            currentImage++;
-            if (currentImage > totalImages) {
-                currentImage = 1;
-            }
-            showImage(currentImage);
-        }
-
-        function startSlideshow() {
-            interval = setInterval(nextImage, 1000); // Change image every 3 seconds (3000 milliseconds)
-     
-        }
-        showSlide(currentSlide); // Show the first slide initially
-        showImage(currentImage); // Show the first image initially
-        startSlideshow(); // Start the slideshow
+        });
     });
 </script>
 </body>

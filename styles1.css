@@ -1,70 +1,148 @@
+body {
+    background-color: #000000;
+}
 
+.container {
+    display: flex;
+    height: auto; /* Extend container to full height of the page */
+ 
+}
 
-.moving-image {
-    position: absolute;
+.column {
+    flex: 1;
+    background-color: #a03434;
     cursor: pointer;
-    height: 500px;
-    width: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Position images relative to the column */
 }
-.popup {
+.images::-webkit-scrollbar {
     display: none;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    padding: 20px;
-    border: 1px solid #ccc;
-    z-index: 999;
-    opacity: 0; /* Add opacity property */
-    transition: opacity 0.3s ease; /* Add transition for opacity */
+  }
+  .expanded::-webkit-scrollbar {
+    display: none;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+
+.images {
+    flex: 1; /* Make the image span the whole compressed column */
+    display: flex; /* Use flexbox for image layout */
+    flex-direction: column; /* Arrange images in a column */
+    align-items: center; /* Center images vertically */
+    overflow-x: hidden; /* Hide the horizontal scrollbar */
+    height: 65vh;
+    
+}
+.expanded .images {
+    overflow-y: auto; /* Allow scrollbar to appear when expanded */
+}
+.images img {
+    width: 100%;
+    height: auto;
+     /* Adjust vertical spacing between images */
 }
 
-.popup.show {
-    opacity: 1; /* Change opacity to 1 when popup is shown */
+/* Adjust the margin-top for images in column1 */
+.column:nth-child(1) .images {
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
 }
 
+/* Adjust the margin-top for images in column3 */
+.column:nth-child(3) .images {
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
+}
 
-.popup-content {
+/* Adjust the margin-top for images in column4 */
+.column:nth-child(4) .images {    
+    margin-top: 0vw; /* Adjust the margin-top value as needed */
+}
+
+.expanded {
+    flex: 1000; /* Expanded column takes more space */
+    overflow: scroll;
+    height: 71.5vh;
+}
+
+h1, h2 {
+    margin-top: 1vw;
     text-align: center;
+    font-family: "owners", sans-serif;
+    font-weight: 1000;
+    font-style: normal;
+    color:  #779197;
+}
+
+h1 {
+    font-size: 5vw;
+}
+
+h2 {
+    margin-top: -2vw;
+    margin-bottom: 1vw;
+    font-size: 3vw;
+}
+
+.column-title {
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2vw;
+    display: flex;
+    align-items: flex-start; /* Align title to the start of its container vertically */
+    justify-content: center; /* Center horizontally */
+    white-space: nowrap; /* Ensure the title remains on a single line */
+    font-family: "owners", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+.column-title:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
+a:hover {
+    color: #FFFFFF; /* Change to your desired color */
+}
+
+.column.compressed .images img {
+    height: 0;
+    visibility: hidden;
+}
+
+/* Change the font size of the title to 2vw when compressed */
+.column.compressed .column-title {
+    font-size: 1.5vw;
+    margin-top: 1vw;
+}
+
+.content {
+    display: flex; /* Use flexbox for content layout */
+}
+
+.text {
+    flex: 1; /* Fill remaining space */
+    display: none; /* Hide the text by default */
+    font-size: 1.2vw;
+    font-family: "owners", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin-left: 0.5vw;
+}
+
+.compressed .text {
+    display: none; /* Show the text when the column is compressed */
+}
+
+.expanded .text {
+    display: block; /* Show the text when the column is expanded */
 }
 
 .close {
     position: absolute;
-    top: 5px;
+    top: 10px;
     right: 10px;
+    color: white;
     cursor: pointer;
-}
-body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-}
-
-h1, h2 {
-    text-align: center;
-}
-
-h1{
-    font-size: 10vw;
-}
-h2{
-    font-size: 7vw;
-}
-h3{
-    font-size: 4vw;
-}
-h4{
-    font-size: 2vw;
-}
-p{
-    font-size: 1vw;
-    text-align: left;
-}
-a{
-    font-size: 1vw ;
+    font-size: 20px;
 }
