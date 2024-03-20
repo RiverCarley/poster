@@ -72,7 +72,8 @@ h1, h2 {
     font-family: "owners", sans-serif;
     font-weight: 1000;
     font-style: normal;
-    color:  #779197;;
+    color:  #ffffff;;
+    cursor: pointer;
 }
 
 h1 {
@@ -99,10 +100,10 @@ h2 {
     font-style: normal;
 }
 .column-title:hover {
-    color: #FFFFFF; /* Change to your desired color */
+    color:red; /* Change to your desired color */
 }
 a:hover {
-    color: #FFFFFF; /* Change to your desired color */
+    color: red; /* Change to your desired color */
 }
 
 .column.compressed .images img {

@@ -3,8 +3,8 @@ $(document).ready(function(){
       // Define an array of colors
 // Define an array of colors
 
-$(".column").css("background-color", "#779197");
-const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#ffffff', '#779197'];
+$(".column").css("background-color", "#ffffff");
+const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#779197','#ffffff'];
 let currentColorIndex = 0;
 
 // Function to handle column click
@@ -67,11 +67,12 @@ $("h1, h2").on("click", function(){
             // Reset the clicked column to its initial state
             clickedColumn.removeClass("expanded");
             $(".column.expanded, .column.compressed").removeClass("expanded compressed");
-         //   $(".column").css({"flex": "", "transition": "flex 0.5s ease"});
+           $(".column").css({"flex": "", "transition": "flex 0.5s ease"});
+         
             $(".column-title").css("writing-mode", "");
             console.log("Column compressed"); // Debug log
         } else {
-        //    $(".column").css({"flex": "", "transition": "flex 3s ease"});
+           $(".column").css({"flex": "", "transition": "flex 3s ease"});
             // Collapse all columns except the clicked one
             $(".column").removeClass("expanded").addClass("compressed");
             // Toggle the expanded/compressed class on the clicked column
@@ -126,6 +127,7 @@ $("h1, h2").on("click", function(){
         e.stopPropagation(); // Stop event propagation to parent column
     });
 });
+/*
 // Function to continuously scroll the div
 // Function to continuously scroll the div with throttling
 function scrollDiv(event) {
@@ -162,7 +164,7 @@ scrollDiv.isThrottled = false;
 document.querySelectorAll(".column").forEach(column => {
     column.addEventListener("wheel", scrollDiv);
 });
-
+*/
 
   
   
