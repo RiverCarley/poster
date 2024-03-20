@@ -129,6 +129,7 @@ a:hover {
     font-weight: 200;
     font-style: normal;
     margin-left: 0.5vw;
+    letter-spacing: 0.07vw; /* Adjust the value as needed */
 }
 
 .compressed .text {
