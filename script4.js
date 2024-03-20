@@ -4,7 +4,7 @@ $(document).ready(function(){
 
       $(".column").css("background-color", "#779197");
    
-    const colors = ['#979797', '#a03434', '#b89751', ' #77977a;', '#ffffff','#779197'];
+    const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#ffffff','#779197'];
     let currentColorIndex = 0;
 
     // Function to handle column click
