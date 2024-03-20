@@ -1,37 +1,64 @@
 $(document).ready(function(){
     console.log("Document ready"); // Debug log
       // Define an array of colors
+// Define an array of colors
 
-      $(".column").css("background-color", "#779197");
-   
-    const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#ffffff','#779197'];
-    let currentColorIndex = 0;
+$(".column").css("background-color", "#779197");
+const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#ffffff', '#779197'];
+let currentColorIndex = 0;
 
-    // Function to handle column click
-    function handleTextClick(clickedText) {
-        console.log("Handling text click"); // Debug log
+// Function to handle column click
+function handleTextClick(clickedText) {
+    console.log("Handling text click"); // Debug log
 
-        // Get the parent column of the clicked text
-        const clickedColumn = clickedText.closest('.column');
+    // Get the parent column of the clicked text
+    const clickedColumn = clickedText.closest('.column');
 
-        // Toggle the clicked class on the parent column
-        clickedColumn.toggleClass("clicked");
-        // Get the next color from the colors array
-        const nextColor = colors[currentColorIndex];
-        currentColorIndex = (currentColorIndex + 1) % colors.length;
+    // Toggle the clicked class on the parent column
+    clickedColumn.toggleClass("clicked");
+    
+    // Get the next color from the colors array
+    const nextColor = colors[currentColorIndex];
+    currentColorIndex = (currentColorIndex + 1) % colors.length;
 
+    // Change text color of the clicked text
+    clickedText.filter("h1").add("h2").css("color", nextColor);
+    clickedText.filter("h2").add("h1").css("color", nextColor);
+    $(".column").css("background-color", nextColor);
 
-        // Change text color of the clicked text
-        clickedText.filter("h1").add("h2").css("color", nextColor);
-        clickedText.filter("h2").add("h1").css("color", nextColor);
-        $(".column").css("background-color", nextColor);
-
+    // Check if the next color is #ffffff
+    if (nextColor === '#ffffff') {
+        // If yes, add a CSS rule to change a:hover color to red
+        $("<style>")
+            .prop("type", "text/css")
+            .html(".column-title:hover { color: red; }")
+            .appendTo("head");
+    } else {
+        // If no, add a CSS rule to change a:hover color to white
+        $("<style>")
+            .prop("type", "text/css")
+            .html(".column-title:hover { color: white; }")
+            .appendTo("head");
     }
+    if (nextColor === '#ffffff') {
+        // If yes, add a CSS rule to change a:hover color to red
+        $("<style>")
+            .prop("type", "text/css")
+            .html("a:hover { color: red; }")
+            .appendTo("head");
+    } else {
+        // If no, add a CSS rule to change a:hover color to white
+        $("<style>")
+            .prop("type", "text/css")
+            .html("a:hover { color: white; }")
+            .appendTo("head");
+    }
+}
 
-    // Click event handler for h1 and h2 elements
-    $("h1, h2").on("click", function(){
-        handleTextClick($(this));
-    });
+// Click event handler for h1 and h2 elements
+$("h1, h2").on("click", function(){
+    handleTextClick($(this));
+});
     // Function to handle column click
     function handleColumnClick(clickedColumn) {
         // Check if the clicked column is already expanded
