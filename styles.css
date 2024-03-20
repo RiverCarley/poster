@@ -11,7 +11,7 @@ body {
 .column {
     flex: 1;
     caret-color: red; /* You can specify any color here */
-    cursor: url('images/emi2/2-1024x1280.png'), auto; /* Set the cursor image */
+    cursor:pointer; /* Set the cursor image */
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
@@ -35,6 +35,7 @@ body {
     align-items: center; /* Center images vertically */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
+    cursor:ns-resize; /* Set the cursor image */
     
     
 }
@@ -75,7 +76,7 @@ h1, h2 {
     font-weight: 1000;
     font-style: normal;
     color:  #ffffff;;
-    cursor: pointer;
+    cursor: cell;
 }
 
 h1 {
@@ -106,6 +107,7 @@ h2 {
 }
 a:hover {
     color: red; /* Change to your desired color */
+    cursor:alias; /* Set the cursor image */
 }
 
 .column.compressed .images img {
