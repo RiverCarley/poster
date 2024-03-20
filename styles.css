@@ -10,12 +10,13 @@ body {
 
 .column {
     flex: 1;
-
-    cursor: pointer;
+    caret-color: red; /* You can specify any color here */
+    cursor: url('images/emi2/2-1024x1280.png'), auto; /* Set the cursor image */
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
 }
+
 .images::-webkit-scrollbar {
     display: none;
   }
@@ -34,6 +35,7 @@ body {
     align-items: center; /* Center images vertically */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
+    
     
 }
 .expanded .images {

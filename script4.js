@@ -134,7 +134,7 @@ $("h1, h2").on("click", function(){
         e.stopPropagation(); // Stop event propagation to parent column
     });
 });
-
+document.getElementById("myHeading").style.caretColor = "red";
 /***********************************************************
 // Function to continuously scroll the div
 // Function to continuously scroll the div with throttling
