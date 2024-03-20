@@ -10,7 +10,6 @@ body {
 
 .column {
     flex: 1;
-    background-color: #77977a;
     cursor: pointer;
     display: flex;
     flex-direction: column;
@@ -72,7 +71,7 @@ h1, h2 {
     font-family: "owners", sans-serif;
     font-weight: 1000;
     font-style: normal;
-    color:  #779197;
+    color:  #77977a;
 }
 
 h1 {

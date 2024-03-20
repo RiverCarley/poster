@@ -10,12 +10,13 @@ body {
 
 .column {
     flex: 1;
-    background-color: #779197;
+ 
     cursor: pointer;
     display: flex;
     flex-direction: column;
     position: relative; /* Position images relative to the column */
 }
+
 .images::-webkit-scrollbar {
     display: none;
   }
