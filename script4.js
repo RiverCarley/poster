@@ -69,27 +69,41 @@ $(document).ready(function(){
     });
 });
 // Function to continuously scroll the div
+// Function to continuously scroll the div with throttling
 function scrollDiv(event) {
     // Prevent the default scroll behavior
     event.preventDefault();
 
-    // Get the target column that triggered the event
-    const scrollableDiv = event.currentTarget.querySelector(".images");
+    // Check if the scrollDiv function has been called recently
+    if (!scrollDiv.isThrottled) {
+        // Get the target column that triggered the event
+        const scrollableDiv = event.currentTarget.querySelector(".images");
 
-    // Clone the first child of the target column and append it to the end
-    const firstChild = scrollableDiv.firstElementChild;
-    const clone = firstChild.cloneNode(true);
-    scrollableDiv.appendChild(clone);
+        // Clone the first child of the target column and append it to the end
+        const firstChild = scrollableDiv.firstElementChild;
+        const clone = firstChild.cloneNode(true);
+        scrollableDiv.appendChild(clone);
 
-    // Remove the first child of the target column
-    scrollableDiv.removeChild(firstChild);
+        // Remove the first child of the target column
+        scrollableDiv.removeChild(firstChild);
+
+        // Set isThrottled to true to prevent frequent calls
+        scrollDiv.isThrottled = true;
+
+        // Allow scrollDiv function to be called again after a delay
+        setTimeout(function() {
+            scrollDiv.isThrottled = false;
+        }, 100); // Adjust the delay as needed to control the scrolling speed
+    }
 }
+
+// Set initial value of isThrottled to false
+scrollDiv.isThrottled = false;
 
 // Get all elements with the class "column" and attach the "wheel" event listener to each one
 document.querySelectorAll(".column").forEach(column => {
     column.addEventListener("wheel", scrollDiv);
 });
-
 
 
   
