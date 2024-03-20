@@ -68,3 +68,29 @@ $(document).ready(function(){
         e.stopPropagation(); // Stop event propagation to parent column
     });
 });
+// Function to continuously scroll the div
+function scrollDiv(event) {
+    // Prevent the default scroll behavior
+    event.preventDefault();
+
+    // Get the target column that triggered the event
+    const scrollableDiv = event.currentTarget.querySelector(".images");
+
+    // Clone the first child of the target column and append it to the end
+    const firstChild = scrollableDiv.firstElementChild;
+    const clone = firstChild.cloneNode(true);
+    scrollableDiv.appendChild(clone);
+
+    // Remove the first child of the target column
+    scrollableDiv.removeChild(firstChild);
+}
+
+// Get all elements with the class "column" and attach the "wheel" event listener to each one
+document.querySelectorAll(".column").forEach(column => {
+    column.addEventListener("wheel", scrollDiv);
+});
+
+
+
+  
+  

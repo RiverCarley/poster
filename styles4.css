@@ -34,6 +34,7 @@ body {
     align-items: center; /* Center images vertically */
     overflow-x: hidden; /* Hide the horizontal scrollbar */
     height: 65vh;
+    
 }
 .expanded .images {
     overflow-y: auto; /* Allow scrollbar to appear when expanded */
