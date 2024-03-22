@@ -2,19 +2,19 @@ $(document).ready(function(){
     console.log("Document ready"); // Debug log
       // Define an array of colors
 // Define an array of colors
-$(".info img").click(function(){
-    $("#infoModal").css("display", "block");
-});
+//  $(".info img").click(function(){
+//         $("#infoModal").css("display", "block");
+//     });
 
-$(".close").click(function(){
-    $("#infoModal").css("display", "none");
-});
+//     $(".close").click(function(){
+//         $("#infoModal").css("display", "none");
+//     });
 
-$(window).click(function(event) {
-    if (event.target == $("#infoModal")[0]) {
-        $("#infoModal").css("display", "none");
-    }
-});
+//     $(window).click(function(event) {
+//         if (event.target == $("#infoModal")[0]) {
+//             $("#infoModal").css("display", "none");
+//         }
+//     });
 $(".column").css("background-color", "#ffffff");
 const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#779197','#ffffff'];
 let currentColorIndex = 0;
@@ -81,7 +81,7 @@ $("h1, h2").on("click", function(){
             $(".column.expanded, .column.compressed").removeClass("expanded compressed");
 
          /*************************************************************    
-          * $(".column").css({"flex": "", "transition": "flex 0.5s ease"});
+           $(".column").css({"flex": "", "transition": "flex 0.5s ease"});
           **************************************************************/
          
             $(".column-title").css("writing-mode", "");
@@ -89,7 +89,7 @@ $("h1, h2").on("click", function(){
         } else {
 
              /*************************************************************    
-        //    $(".column").css({"flex": "", "transition": "flex 3s ease"});
+            $(".column").css({"flex": "", "transition": "flex 3s ease"});
         **************************************************************/
 
             // Collapse all columns except the clicked one
