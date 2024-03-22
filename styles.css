@@ -7,6 +7,19 @@ body {
     height: auto; /* Extend container to full height of the page */
  
 }
+.info {
+    position: fixed; /* Fixed positioning */
+    top: 8vw; /* Position from the top of the viewport */
+    left: 0; /* Position from the right of the viewport */
+    z-index: 999; /* Ensure it appears above other content */
+    padding: 1vw; /* Optional padding */
+}
+
+.info img {
+    max-width: 3%; /* Ensure the image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+
 
 .column {
     flex: 1;

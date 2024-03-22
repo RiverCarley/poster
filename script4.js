@@ -2,7 +2,19 @@ $(document).ready(function(){
     console.log("Document ready"); // Debug log
       // Define an array of colors
 // Define an array of colors
+$(".info img").click(function(){
+    $("#infoModal").css("display", "block");
+});
 
+$(".close").click(function(){
+    $("#infoModal").css("display", "none");
+});
+
+$(window).click(function(event) {
+    if (event.target == $("#infoModal")[0]) {
+        $("#infoModal").css("display", "none");
+    }
+});
 $(".column").css("background-color", "#ffffff");
 const colors = ['#979797', '#a03434', '#b89751', '#77977a', '#779197','#ffffff'];
 let currentColorIndex = 0;
